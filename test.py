@@ -1,7 +1,7 @@
 import cv2
 from model import FallDetectionModel
 
-def test_model():
+def model_test():
     model_instance = FallDetectionModel('./pretrained/best.pt')
     test_image = cv2.imread('assets/fall.jpg')
     test_image_rendered, test_image_detected = model_instance.interfere(test_image)
@@ -12,4 +12,4 @@ def test_model():
 
 
 if __name__ == '__main__':
-    test_model()
+    model_test()
